@@ -1,6 +1,12 @@
 import React from 'react';
 import { Database, Server, Key, List, Code2, Zap } from 'lucide-react';
 
+import erAttributes from './assets/images/er_attributes_diagram_1784206919096.jpg';
+import er11 from './assets/images/er_1_1_1784205437193.jpg';
+import er1n from './assets/images/er_1_n_1784205449830.jpg';
+import ermn from './assets/images/er_m_n_1784205462915.jpg';
+import navatheER from './assets/images/navathe_university_er_1784206052363.jpg';
+
 export const slides = [
   {
     id: 'intro',
@@ -39,75 +45,103 @@ export const slides = [
     )
   },
   {
-    id: 'er-attributes',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-blue-400" />
-          ER Diagrams: Attributes
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_attributes_diagram_1784206919096.jpg" alt="ER Attributes Diagram" className="max-h-[500px]" />
-        </div>
-      </div>
-    )
+   id: 'er-attributes',
+component: (
+  <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+    <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+      <Database className="w-8 h-8 text-blue-400" />
+      ER Diagrams: Attributes
+    </h2>
+    <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+      <img
+        src={erAttributes}
+        alt="ER Attributes Diagram"
+        className="max-h-[500px] mx-auto"
+      />
+    </div>
+  </div>
+)
   },
   {
-    id: 'er-diagram-1-1',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-blue-400" />
-          ER Diagram: 1:1 Relationship (Manages)
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_1_1_1784205437193.jpg" alt="1:1 ER Diagram" className="max-h-[400px]" />
-        </div>
+  id: 'er-diagram-1-1',
+  component: (
+    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <Database className="w-8 h-8 text-blue-400" />
+        ER Diagram: 1:1 Relationship (Manages)
+      </h2>
+
+      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+        <img
+          src={er11}
+          alt="1:1 ER Diagram"
+          className="max-h-[400px] mx-auto"
+        />
       </div>
-    )
-  },
+    </div>
+  )
+},
+  
   {
-    id: 'er-diagram-1-n',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-blue-400" />
-          ER Diagram: 1:N Relationship (Offers)
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_1_n_1784205449830.jpg" alt="1:N ER Diagram" className="max-h-[400px]" />
-        </div>
+  id: 'er-diagram-1-n',
+  component: (
+    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <Database className="w-8 h-8 text-blue-400" />
+        ER Diagram: 1:N Relationship (Offers)
+      </h2>
+
+      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+        <img
+          src={er1n}
+          alt="1:N ER Diagram"
+          className="max-h-[400px] mx-auto"
+        />
       </div>
-    )
-  },
-  {
-    id: 'er-diagram-m-n',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-blue-400" />
-          ER Diagram: M:N Relationship (Enrolls)
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_m_n_1784205462915.jpg" alt="M:N ER Diagram" className="max-h-[400px]" />
-        </div>
+    </div>
+  )
+},
+  
+ {
+  id: 'er-diagram-m-n',
+  component: (
+    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <Database className="w-8 h-8 text-blue-400" />
+        ER Diagram: M:N Relationship (Enrolls)
+      </h2>
+
+      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+        <img
+          src={ermn}
+          alt="M:N ER Diagram"
+          className="max-h-[400px] mx-auto"
+        />
       </div>
-    )
-  },
-  {
-    id: 'textbook-er-diagram',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-blue-400" />
-          Textbook ER Diagram: Navathe University Database
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/navathe_university_er_1784206052363.jpg" alt="Textbook ER Diagram" className="max-h-[500px]" />
-        </div>
+    </div>
+  )
+},
+  
+{
+  id: 'textbook-er-diagram',
+  component: (
+    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <Database className="w-8 h-8 text-blue-400" />
+        Textbook ER Diagram: Navathe University Database
+      </h2>
+
+      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+        <img
+          src={navatheER}
+          alt="Textbook ER Diagram"
+          className="max-h-[500px] mx-auto"
+        />
       </div>
-    )
-  },
+    </div>
+  )
+},
+  
   {
     id: 'navathe-explanation',
     component: (
