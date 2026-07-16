@@ -23,22 +23,46 @@ export const slides = [
       </div>
     )
   },
-  {
+ {
     id: 'er-modeling',
     component: (
       <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <h2 className="text-4xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
           <Database className="w-8 h-8 text-blue-400" />
           ER Modeling
         </h2>
         <div className="grid grid-cols-2 gap-6">
           <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
-            <h3 className="text-lg font-semibold text-blue-400 mb-2">Entity & Attributes</h3>
-            <p className="text-slate-400 text-sm">Entity: Real-world object (e.g., Student). Attributes Types: Simple (Age), Composite (Name: FName, LName), Multi-valued (Phone), Derived (Age from DOB).</p>
+            <h3 className="text-xl font-semibold text-blue-400 mb-2">Entity & Attributes</h3>
+            <p className="text-slate-300 text-base">Entity: Real-world object (e.g., Student). Attributes Types: Simple (Age), Composite (Name: FName, LName), Multi-valued (Phone), Derived (Age from DOB).</p>
           </div>
           <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
-            <h3 className="text-lg font-semibold text-emerald-400 mb-2">Cardinality & Participation</h3>
-            <p className="text-slate-400 text-sm">Ratios: 1:1, 1:N, M:N. Participation: Total (Must) vs Partial (Optional).</p>
+            <h3 className="text-xl font-semibold text-emerald-400 mb-2">Cardinality & Participation</h3>
+            <p className="text-slate-300 text-base">Ratios: 1:1, 1:N, M:N. Participation: Total (Must) vs Partial (Optional).</p>
+          </div>
+          <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
+            <h3 className="text-xl font-semibold text-purple-400 mb-2">Relationship</h3>
+            <p className="text-slate-300 text-base">Interaction between entities (e.g., Student enrolls in Course).</p>
+          </div>
+          <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
+            <h3 className="text-xl font-semibold text-yellow-400 mb-2">Primary Key</h3>
+            <p className="text-slate-300 text-base">Uniquely identifies an entity instance (e.g., StudentID).</p>
+          </div>
+          <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
+            <h3 className="text-xl font-semibold text-red-400 mb-2">Weak Entity</h3>
+            <p className="text-slate-300 text-base">Entity that cannot be uniquely identified by its own attributes alone.</p>
+          </div>
+          <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
+            <h3 className="text-xl font-semibold text-pink-400 mb-2">Foreign Key</h3>
+            <p className="text-slate-300 text-base">Attribute in one table that refers to the primary key in another table.</p>
+          </div>
+          <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
+            <h3 className="text-xl font-semibold text-orange-400 mb-2">Ternary Relationship</h3>
+            <p className="text-slate-300 text-base">Relationship involving three entities.</p>
+          </div>
+          <div className="bg-slate-950 border border-slate-800 rounded-xl p-5">
+            <h3 className="text-xl font-semibold text-cyan-400 mb-2">Generalization</h3>
+            <p className="text-slate-300 text-base">Hierarchy where sub-entities inherit attributes from a super-entity.</p>
           </div>
         </div>
       </div>
