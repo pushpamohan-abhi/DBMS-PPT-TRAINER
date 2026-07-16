@@ -1,0 +1,6 @@
+{
+  "name": "DBMS & SQL Masterclass",
+  "description": "An interactive presentation covering DBMS basics, SQL queries (simple to advanced), and normalization, inspired by a pre-placement training lab.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
