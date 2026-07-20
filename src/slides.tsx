@@ -1,14 +1,14 @@
 import React from 'react';
 import { Database, Server, Key, List, Code2, Zap } from 'lucide-react';
-import erAttributes from "../assets/images/er_attributes_diagram_1784206919096.jpg";
-import er11 from "../assets/images/er_1_1_1784205437193.jpg";
-import er1n from "../assets/images/er_1_n_1784205449830.jpg";
-import ermn from "../assets/images/er_m_n_1784205462915.jpg";
-import navathe from "../assets/images/navathe_university_er_1784206052363.jpg";
-import normDept from "../assets/images/normalization_department_1784516502064.jpg";
-import norm2nf from "../assets/images/normalization_2nf_1784516593739.jpg";
-import norm3nf from "../assets/images/normalization_3nf_1784516661392.jpg";
 
+import erAttributes from "./assets/images/er_attributes_diagram_1784206919096.jpg";
+import er11 from "./assets/images/er_1_1_1784205437193.jpg";
+import er1n from "./assets/images/er_1_n_1784205449830.jpg";
+import ermn from "./assets/images/er_m_n_1784205462915.jpg";
+import navathe from "./assets/images/navathe_university_er_1784206052363.jpg";
+import normDept from "./assets/images/normalization_department_1784516502064.jpg";
+import norm2nf from "./assets/images/normalization_2nf_1784516593739.jpg";
+import norm3nf from "./assets/images/normalization_3nf_1784516661392.jpg";
 export const slides = [
   {
     id: 'intro',
@@ -79,10 +79,15 @@ export const slides = [
           ER Diagrams: Attributes
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_attributes_diagram_1784206919096.jpg" alt="ER Attributes Diagram" className="max-h-[500px]" />
-        </div>
-      </div>
-    )
+  <img
+    src={erAttributes}
+    alt="ER Attributes Diagram"
+    className="max-h-[500px]"
+  />
+</div>
+
+</div>
+)
   },
   {
     id: 'er-diagram-1-1',
@@ -93,7 +98,11 @@ export const slides = [
           ER Diagram: 1:1 Relationship (Manages)
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_1_1_1784205437193.jpg" alt="1:1 ER Diagram" className="max-h-[400px]" />
+          <img
+  src={er11}
+  alt="1:1 ER Diagram"
+  className="max-h-[400px]"
+/>
         </div>
       </div>
     )
@@ -107,7 +116,11 @@ export const slides = [
           ER Diagram: 1:N Relationship (Offers)
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_1_n_1784205449830.jpg" alt="1:N ER Diagram" className="max-h-[400px]" />
+  <img
+  src={er1n}
+  alt="1:N ER Diagram"
+  className="max-h-[400px]"
+/>
         </div>
       </div>
     )
@@ -121,7 +134,11 @@ export const slides = [
           ER Diagram: M:N Relationship (Enrolls)
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/er_m_n_1784205462915.jpg" alt="M:N ER Diagram" className="max-h-[400px]" />
+            <img
+  src={ermn}
+  alt="M:N ER Diagram"
+  className="max-h-[400px]"
+/>
         </div>
       </div>
     )
@@ -135,7 +152,11 @@ export const slides = [
           Textbook ER Diagram: Navathe University Database
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/navathe_university_er_1784206052363.jpg" alt="Textbook ER Diagram" className="max-h-[500px]" />
+            <img
+  src={navathe}
+  alt="Textbook ER Diagram"
+  className="max-h-[500px]"
+/>
         </div>
       </div>
     )
@@ -370,9 +391,11 @@ export const slides = [
           Normalization: 1NF Example
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src={normDept} alt="1NF Example" className="max-h-[500px]" />
-      </div>
-    )
+    <img src={normDept} alt="1NF Example" className="max-h-[500px]" />
+</div>
+
+</div>
+)
   },
   {
     id: 'normalization-2nf',
@@ -392,18 +415,25 @@ export const slides = [
     )
   },
   {
-    id: 'normalization-2nf-example',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-purple-400" />
-          Normalization: 2NF Example
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src={norm2nf} alt="2NF Example" className="max-h-[500px]" />
+  id: 'normalization-2nf-example',
+  component: (
+    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <Database className="w-8 h-8 text-purple-400" />
+        Normalization: 2NF Example
+      </h2>
+
+      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+        <img
+          src={norm2nf}
+          alt="2NF Example"
+          className="max-h-[500px]"
+        />
       </div>
-    )
-  },
+
+    </div>
+  )
+},
   {
     id: 'normalization-3nf',
     component: (
@@ -422,17 +452,23 @@ export const slides = [
     )
   },
   {
-    id: 'normalization-3nf-example',
-    component: (
-      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-          <Database className="w-8 h-8 text-blue-400" />
-          Normalization: 3NF Example
-        </h2>
-        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-           <img src={norm3nf} alt="3NF Example" className="max-h-[500px]" />
-        </div>
+  id: 'normalization-3nf-example',
+  component: (
+    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+        <Database className="w-8 h-8 text-blue-400" />
+        Normalization: 3NF Example
+      </h2>
+
+      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+        <img
+          src={norm3nf}
+          alt="3NF Example"
+          className="max-h-[500px]"
+        />
       </div>
-    )
-  }
+
+    </div>
+  )
+}
 ];
