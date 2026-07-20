@@ -1,12 +1,6 @@
 import React from 'react';
 import { Database, Server, Key, List, Code2, Zap } from 'lucide-react';
 
-import erAttributes from './assets/images/er_attributes_diagram_1784206919096.jpg';
-import er11 from './assets/images/er_1_1_1784205437193.jpg';
-import er1n from './assets/images/er_1_n_1784205449830.jpg';
-import ermn from './assets/images/er_m_n_1784205462915.jpg';
-import navatheER from './assets/images/navathe_university_er_1784206052363.jpg';
-
 export const slides = [
   {
     id: 'intro',
@@ -23,7 +17,7 @@ export const slides = [
       </div>
     )
   },
- {
+  {
     id: 'er-modeling',
     component: (
       <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
@@ -69,103 +63,75 @@ export const slides = [
     )
   },
   {
-   id: 'er-attributes',
-component: (
-  <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-    <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-      <Database className="w-8 h-8 text-blue-400" />
-      ER Diagrams: Attributes
-    </h2>
-    <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-      <img
-        src={erAttributes}
-        alt="ER Attributes Diagram"
-        className="max-h-[500px] mx-auto"
-      />
-    </div>
-  </div>
-)
+    id: 'er-attributes',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          ER Diagrams: Attributes
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/er_attributes_diagram_1784206919096.jpg" alt="ER Attributes Diagram" className="max-h-[500px]" />
+        </div>
+      </div>
+    )
   },
   {
-  id: 'er-diagram-1-1',
-  component: (
-    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-        <Database className="w-8 h-8 text-blue-400" />
-        ER Diagram: 1:1 Relationship (Manages)
-      </h2>
-
-      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-        <img
-          src={er11}
-          alt="1:1 ER Diagram"
-          className="max-h-[400px] mx-auto"
-        />
+    id: 'er-diagram-1-1',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          ER Diagram: 1:1 Relationship (Manages)
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/er_1_1_1784205437193.jpg" alt="1:1 ER Diagram" className="max-h-[400px]" />
+        </div>
       </div>
-    </div>
-  )
-},
-  
+    )
+  },
   {
-  id: 'er-diagram-1-n',
-  component: (
-    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-        <Database className="w-8 h-8 text-blue-400" />
-        ER Diagram: 1:N Relationship (Offers)
-      </h2>
-
-      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-        <img
-          src={er1n}
-          alt="1:N ER Diagram"
-          className="max-h-[400px] mx-auto"
-        />
+    id: 'er-diagram-1-n',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          ER Diagram: 1:N Relationship (Offers)
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/er_1_n_1784205449830.jpg" alt="1:N ER Diagram" className="max-h-[400px]" />
+        </div>
       </div>
-    </div>
-  )
-},
-  
- {
-  id: 'er-diagram-m-n',
-  component: (
-    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-        <Database className="w-8 h-8 text-blue-400" />
-        ER Diagram: M:N Relationship (Enrolls)
-      </h2>
-
-      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-        <img
-          src={ermn}
-          alt="M:N ER Diagram"
-          className="max-h-[400px] mx-auto"
-        />
+    )
+  },
+  {
+    id: 'er-diagram-m-n',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          ER Diagram: M:N Relationship (Enrolls)
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/er_m_n_1784205462915.jpg" alt="M:N ER Diagram" className="max-h-[400px]" />
+        </div>
       </div>
-    </div>
-  )
-},
-  
-{
-  id: 'textbook-er-diagram',
-  component: (
-    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-        <Database className="w-8 h-8 text-blue-400" />
-        Textbook ER Diagram: Navathe University Database
-      </h2>
-
-      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-        <img
-          src={navatheER}
-          alt="Textbook ER Diagram"
-          className="max-h-[500px] mx-auto"
-        />
+    )
+  },
+  {
+    id: 'textbook-er-diagram',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          Textbook ER Diagram: Navathe University Database
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/navathe_university_er_1784206052363.jpg" alt="Textbook ER Diagram" className="max-h-[500px]" />
+        </div>
       </div>
-    </div>
-  )
-},
-  
+    )
+  },
   {
     id: 'navathe-explanation',
     component: (
@@ -321,7 +287,7 @@ component: (
   {
     id: 'subqueries-examples',
     component: (
-      <div className="flex-1 flex flex-col p-12 h-full">
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
         <h2 className="text-4xl font-bold mb-8 text-blue-400">Subqueries: 5 Examples</h2>
         <div className="bg-slate-950 p-8 rounded-xl border border-slate-800 text-slate-300 space-y-6 text-lg">
           <div>
@@ -388,6 +354,20 @@ component: (
     )
   },
   {
+    id: 'normalization-1nf-example',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-emerald-400" />
+          Normalization: 1NF Example
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/normalization_department_1784516502064.jpg" alt="1NF Normalization Example" className="max-h-[500px]" />
+        </div>
+      </div>
+    )
+  },
+  {
     id: 'normalization-2nf',
     component: (
       <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
@@ -405,6 +385,20 @@ component: (
     )
   },
   {
+    id: 'normalization-2nf-example',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-purple-400" />
+          Normalization: 2NF Example
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/normalization_2nf_1784516593739.jpg" alt="2NF Normalization Example" className="max-h-[500px]" />
+        </div>
+      </div>
+    )
+  },
+  {
     id: 'normalization-3nf',
     component: (
       <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
@@ -417,6 +411,20 @@ component: (
             <p className="text-red-400 mt-4">Ex 2: [<u>EmpID</u>, Name, DeptID, DeptName]</p>
             <p className="text-emerald-400">3NF: [<u>EmpID</u>, Name, DeptID], [<u>DeptID</u>, DeptName]</p>
           </div>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'normalization-3nf-example',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          Normalization: 3NF Example
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/normalization_3nf_1784516661392.jpg" alt="3NF Normalization Example" className="max-h-[500px]" />
         </div>
       </div>
     )
