@@ -1,5 +1,13 @@
 import React from 'react';
 import { Database, Server, Key, List, Code2, Zap } from 'lucide-react';
+import erAttributes from "../assets/images/er_attributes_diagram_1784206919096.jpg";
+import er11 from "../assets/images/er_1_1_1784205437193.jpg";
+import er1n from "../assets/images/er_1_n_1784205449830.jpg";
+import ermn from "../assets/images/er_m_n_1784205462915.jpg";
+import navathe from "../assets/images/navathe_university_er_1784206052363.jpg";
+import normDept from "../assets/images/normalization_department_1784516502064.jpg";
+import norm2nf from "../assets/images/normalization_2nf_1784516593739.jpg";
+import norm3nf from "../assets/images/normalization_3nf_1784516661392.jpg";
 
 export const slides = [
   {
@@ -362,8 +370,7 @@ export const slides = [
           Normalization: 1NF Example
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/normalization_department_1784516502064.jpg" alt="1NF Normalization Example" className="max-h-[500px]" />
-        </div>
+            <img src={normDept} alt="1NF Example" className="max-h-[500px]" />
       </div>
     )
   },
@@ -393,8 +400,7 @@ export const slides = [
           Normalization: 2NF Example
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/normalization_2nf_1784516593739.jpg" alt="2NF Normalization Example" className="max-h-[500px]" />
-        </div>
+            <img src={norm2nf} alt="2NF Example" className="max-h-[500px]" />
       </div>
     )
   },
@@ -424,7 +430,7 @@ export const slides = [
           Normalization: 3NF Example
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img src="/src/assets/images/normalization_3nf_1784516661392.jpg" alt="3NF Normalization Example" className="max-h-[500px]" />
+           <img src={norm3nf} alt="3NF Example" className="max-h-[500px]" />
         </div>
       </div>
     )
