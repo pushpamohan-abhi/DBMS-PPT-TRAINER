@@ -1,14 +1,6 @@
 import React from 'react';
 import { Database, Server, Key, List, Code2, Zap } from 'lucide-react';
 
-import erAttributes from "./assets/images/er_attributes_diagram_1784206919096.jpg";
-import er11 from "./assets/images/er_1_1_1784205437193.jpg";
-import er1n from "./assets/images/er_1_n_1784205449830.jpg";
-import ermn from "./assets/images/er_m_n_1784205462915.jpg";
-import navathe from "./assets/images/navathe_university_er_1784206052363.jpg";
-import normDept from "./assets/images/normalization_department_1784516502064.jpg";
-import norm2nf from "./assets/images/normalization_2nf_1784516593739.jpg";
-import norm3nf from "./assets/images/normalization_3nf_1784516661392.jpg";
 export const slides = [
   {
     id: 'intro',
@@ -79,15 +71,10 @@ export const slides = [
           ER Diagrams: Attributes
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-  <img
-    src={erAttributes}
-    alt="ER Attributes Diagram"
-    className="max-h-[500px]"
-  />
-</div>
-
-</div>
-)
+            <img src="/src/assets/images/er_attributes_diagram_1784206919096.jpg" alt="ER Attributes Diagram" className="max-h-[500px]" />
+        </div>
+      </div>
+    )
   },
   {
     id: 'er-diagram-1-1',
@@ -98,11 +85,7 @@ export const slides = [
           ER Diagram: 1:1 Relationship (Manages)
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-          <img
-  src={er11}
-  alt="1:1 ER Diagram"
-  className="max-h-[400px]"
-/>
+            <img src="/src/assets/images/er_1_1_1784205437193.jpg" alt="1:1 ER Diagram" className="max-h-[400px]" />
         </div>
       </div>
     )
@@ -116,11 +99,7 @@ export const slides = [
           ER Diagram: 1:N Relationship (Offers)
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-  <img
-  src={er1n}
-  alt="1:N ER Diagram"
-  className="max-h-[400px]"
-/>
+            <img src="/src/assets/images/er_1_n_1784205449830.jpg" alt="1:N ER Diagram" className="max-h-[400px]" />
         </div>
       </div>
     )
@@ -134,11 +113,7 @@ export const slides = [
           ER Diagram: M:N Relationship (Enrolls)
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img
-  src={ermn}
-  alt="M:N ER Diagram"
-  className="max-h-[400px]"
-/>
+            <img src="/src/assets/images/er_m_n_1784205462915.jpg" alt="M:N ER Diagram" className="max-h-[400px]" />
         </div>
       </div>
     )
@@ -152,11 +127,7 @@ export const slides = [
           Textbook ER Diagram: Navathe University Database
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-            <img
-  src={navathe}
-  alt="Textbook ER Diagram"
-  className="max-h-[500px]"
-/>
+            <img src="/src/assets/images/navathe_university_er_1784206052363.jpg" alt="Textbook ER Diagram" className="max-h-[500px]" />
         </div>
       </div>
     )
@@ -366,6 +337,85 @@ export const slides = [
     )
   },
   {
+    id: 'sql-joins-comparison',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          SQL Joins: Left, Right, and Full
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/sql_joins_comparison_1784860887780.jpg" alt="SQL Joins Comparison" className="max-h-[500px]" />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'sql-joins-examples',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          SQL JOIN Examples
+        </h2>
+        <div className="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-sm text-slate-300 space-y-4">
+          <p className="text-blue-400 font-semibold">LEFT JOIN:</p>
+          <pre className="bg-black p-4 rounded">SELECT * FROM Emp LEFT JOIN Dept ON Emp.Dno = Dept.Dno;</pre>
+          <pre className="bg-black p-4 rounded text-xs mt-2">{`Ename   | Dno | Dname
+-----------------------
+Alice   | 1   | Sales
+Bob     | 1   | Sales
+Charlie | 2   | HR
+David   | 3   | NULL`}</pre>
+          <p className="text-emerald-400 font-semibold">RIGHT JOIN:</p>
+          <pre className="bg-black p-4 rounded">SELECT * FROM Emp RIGHT JOIN Dept ON Emp.Dno = Dept.Dno;</pre>
+          <pre className="bg-black p-4 rounded text-xs mt-2">{`Ename   | Dno | Dname
+-----------------------
+Alice   | 1   | Sales
+Bob     | 1   | Sales
+Charlie | 2   | HR
+NULL    | 4   | IT`}</pre>
+          <p className="text-purple-400 font-semibold">FULL JOIN:</p>
+          <pre className="bg-black p-4 rounded">SELECT * FROM Emp FULL JOIN Dept ON Emp.Dno = Dept.Dno;</pre>
+          <pre className="bg-black p-4 rounded text-xs mt-2">{`Ename   | Dno | Dname
+-----------------------
+Alice   | 1   | Sales
+Bob     | 1   | Sales
+Charlie | 2   | HR
+David   | 3   | NULL
+NULL    | 4   | IT`}</pre>
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 'sql-views-examples',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          SQL VIEW Examples
+        </h2>
+        <p className="text-slate-400 mb-6">
+          Views provide a virtual table to simplify complex queries, improve security by hiding sensitive columns, and maintain data consistency. Note: A view is a virtual table; updating it does not directly update the base tables.
+        </p>
+        <div className="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-sm text-slate-300 space-y-4">
+          <p className="text-blue-400 font-semibold">Creating a View:</p>
+          <pre className="bg-black p-4 rounded">CREATE VIEW DeptEmp AS SELECT Dname, Ename FROM Dept, Emp WHERE Dept.Dno = Emp.Dno;</pre>
+          <p className="text-emerald-400 font-semibold">Querying a View:</p>
+          <pre className="bg-black p-4 rounded">SELECT * FROM DeptEmp WHERE Dname = 'Research';</pre>
+          <p className="text-emerald-400 font-semibold mt-4">View Result (DeptEmp Example):</p>
+          <pre className="bg-black p-4 rounded text-sm">
+{`Dname   | Ename
+---------------
+Sales   | Alice
+Sales   | Bob`}
+          </pre>
+        </div>
+      </div>
+    )
+  },
+  {
     id: 'normalization-1nf',
     component: (
       <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
@@ -391,11 +441,10 @@ export const slides = [
           Normalization: 1NF Example
         </h2>
         <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-    <img src={normDept} alt="1NF Example" className="max-h-[500px]" />
-</div>
-
-</div>
-)
+            <img src="/src/assets/images/normalization_department_1784516502064.jpg" alt="1NF Normalization Example" className="max-h-[500px]" />
+        </div>
+      </div>
+    )
   },
   {
     id: 'normalization-2nf',
@@ -415,25 +464,19 @@ export const slides = [
     )
   },
   {
-  id: 'normalization-2nf-example',
-  component: (
-    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-        <Database className="w-8 h-8 text-purple-400" />
-        Normalization: 2NF Example
-      </h2>
-
-      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-        <img
-          src={norm2nf}
-          alt="2NF Example"
-          className="max-h-[500px]"
-        />
+    id: 'normalization-2nf-example',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-purple-400" />
+          Normalization: 2NF Example
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/normalization_2nf_1784516593739.jpg" alt="2NF Normalization Example" className="max-h-[500px]" />
+        </div>
       </div>
-
-    </div>
-  )
-},
+    )
+  },
   {
     id: 'normalization-3nf',
     component: (
@@ -452,23 +495,17 @@ export const slides = [
     )
   },
   {
-  id: 'normalization-3nf-example',
-  component: (
-    <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
-      <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
-        <Database className="w-8 h-8 text-blue-400" />
-        Normalization: 3NF Example
-      </h2>
-
-      <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
-        <img
-          src={norm3nf}
-          alt="3NF Example"
-          className="max-h-[500px]"
-        />
+    id: 'normalization-3nf-example',
+    component: (
+      <div className="flex-1 flex flex-col p-12 h-full overflow-y-auto">
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 border-b border-slate-800 pb-4">
+          <Database className="w-8 h-8 text-blue-400" />
+          Normalization: 3NF Example
+        </h2>
+        <div className="bg-white p-4 rounded-xl border border-slate-800 flex justify-center">
+            <img src="/src/assets/images/normalization_3nf_1784516661392.jpg" alt="3NF Normalization Example" className="max-h-[500px]" />
+        </div>
       </div>
-
-    </div>
-  )
-}
+    )
+  }
 ];
